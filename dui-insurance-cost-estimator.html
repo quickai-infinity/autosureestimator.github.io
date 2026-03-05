@@ -2,27 +2,25 @@
 <html lang="en-US">
 
 <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#050505">
 
   <title>DUI Insurance Cost Estimator (US) | AutoSureEstimator</title>
-  <meta name="description"
-    content="Estimate how much a DUI conviction affects your car insurance rates. Calculate premiums based on time passed since conviction, state, and age.">
-  <meta name="keywords"
-    content="DUI insurance cost, DWI insurance rates, high risk auto insurance, DUI insurance calculator, insurance after DUI">
+  <meta name="description" content="Estimate how much a DUI conviction affects your car insurance rates. Calculate premiums based on time passed since conviction, state, and age.">
+  <meta name="keywords" content="DUI insurance cost, DWI insurance rates, high risk auto insurance, DUI insurance calculator, insurance after DUI">
   <link rel="canonical" href="https://www.autosureestimator.com/dui-insurance-cost-estimator.html">
 
   <meta property="og:title" content="DUI Insurance Cost Estimator">
-  <meta property="og:description"
-    content="Calculate the financial impact of a DUI on your auto insurance premiums. Independent and anonymous.">
+  <meta property="og:description" content="Calculate the financial impact of a DUI on your auto insurance premiums. Independent and anonymous.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.autosureestimator.com/dui-insurance-cost-estimator.html">
   <meta property="og:site_name" content="AutoSureEstimator">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -54,15 +52,17 @@
 
     html {
       scroll-behavior: smooth;
+      background-color: var(--bg);
     }
 
     body {
       font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
       line-height: 1.6;
-      background: var(--bg);
+      background-color: var(--bg);
       color: var(--text);
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
     }
 
     a {
@@ -198,17 +198,8 @@
     }
 
     @keyframes pulse {
-
-      0%,
-      100% {
-        opacity: .6;
-        transform: scale(1);
-      }
-
-      50% {
-        opacity: 1;
-        transform: scale(1.25);
-      }
+      0%, 100% { opacity: .6; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.25); }
     }
 
     .page-header h1 {
@@ -251,10 +242,6 @@
       color: #fbbf24;
     }
 
-    .disclaimer-box em {
-      color: #e5e7eb;
-    }
-
     .calc-wrap {
       position: relative;
       z-index: 10;
@@ -269,9 +256,7 @@
     }
 
     @media (max-width: 900px) {
-      .calc-container {
-        grid-template-columns: 1fr;
-      }
+      .calc-container { grid-template-columns: 1fr; }
     }
 
     .card {
@@ -476,8 +461,7 @@
       color: #e4e4e7;
     }
 
-    .content-block p,
-    .content-block li {
+    .content-block p, .content-block li {
       color: var(--muted);
       font-size: 14px;
     }
@@ -570,21 +554,11 @@
     }
 
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(10px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    .title-left {
-      min-width: 220px;
-    }
-
+    .title-left { min-width: 220px; }
     .title-right {
       display: flex;
       flex-direction: column;
@@ -599,10 +573,7 @@
         flex-direction: column;
         align-items: stretch;
       }
-
-      .title-right {
-        max-width: 100%;
-      }
+      .title-right { max-width: 100%; }
     }
   </style>
 </head>
@@ -613,15 +584,15 @@
 
   <header>
     <div class="container nav-container">
-      <a href="tools.html" class="brand" aria-label="AutoSureEstimator Home">
+      <a href="index.html" class="brand" aria-label="AutoSureEstimator Home">
         <div class="brand-mark"></div>
         <span class="logo">AutoSure</span>
       </a>
       <nav>
         <ul class="nav-links">
-          <li><a href="tools.html">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a class="active" href="tools.html">Tools</a></li>
-          <li><a href="tools.html">How It Works</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -631,7 +602,6 @@
   </header>
 
   <main>
-
     <section class="page-header">
       <div class="container">
         <div class="pill">
@@ -680,8 +650,7 @@
 
                 <div id="manualWrap" class="form-group" style="display:none;margin:0;">
                   <label class="form-label" for="currentPremium">Your current monthly premium (USD)</label>
-                  <input id="currentPremium" type="number" inputmode="decimal" min="10" step="1" placeholder="e.g., 150"
-                    class="form-select" style="appearance:none;" />
+                  <input id="currentPremium" type="number" inputmode="decimal" min="10" step="1" placeholder="e.g., 150" class="form-select" style="appearance:none;" />
                   <div class="hint">Enter what you pay now. We’ll calculate the DUI increase range.</div>
                 </div>
               </div>
@@ -768,7 +737,6 @@
 
     <section class="section">
       <div class="container">
-
         <div class="content-block">
           <h2>Ways to Reduce Costs After a DUI</h2>
           <p>While your rates will inevitably rise, there are strategies to mitigate the damage:</p>
@@ -816,10 +784,8 @@
             <p>The DUI itself is a criminal/traffic record, not a credit record. However, the fines, legal fees, and increased insurance costs can lead to debt that impacts your score if unpaid.</p>
           </details>
         </div>
-
       </div>
     </section>
-
   </main>
 
   <footer>
@@ -827,8 +793,7 @@
       <div class="footer-grid">
         <div class="footer-col">
           <h4>AutoSureEstimator</h4>
-          <p style="font-size: 12px; color: #71717a;">Empowering US drivers with transparent, data-driven
-            insurance cost insights.</p>
+          <p style="font-size: 12px; color: #71717a;">Empowering US drivers with transparent, data-driven insurance cost insights.</p>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
@@ -846,8 +811,7 @@
         </div>
       </div>
       <div class="copyright">
-        <p>&copy; 2026 AutoSureEstimator. All rights reserved.<br>
-          Disclaimer: This website is for informational purposes only and does not provide financial advice.</p>
+        <p>&copy; 2026 AutoSureEstimator. All rights reserved.<br>Disclaimer: This website is for informational purposes only and does not provide financial advice.</p>
       </div>
     </div>
   </footer>
@@ -870,31 +834,26 @@
       const coverageFactor = parseFloat(covEl.value);
 
       let estimatedAnnual = 0;
-
       const isManual = manualToggle && manualToggle.checked;
+
       if (isManual) {
         const prem = parseFloat(premiumInput.value);
         if (!prem || prem <= 0) return; 
         
-        // Manual mode: multiply their current cost by the DUI penalty time factor
         let currentAnnual = prem * 12;
         estimatedAnnual = currentAnnual * timeFactor;
       } else {
-        // Standard mode: calculate based on selections
         const baseRate = 1400;
         estimatedAnnual = baseRate * stateFactor * ageFactor * timeFactor * coverageFactor;
       }
 
-      // Ranges (+/- 15%)
       const lowAnnual = estimatedAnnual * 0.85;
       const highAnnual = estimatedAnnual * 1.15;
       const lowMonthly = lowAnnual / 12;
       const highMonthly = highAnnual / 12;
 
-      const formatCurrency = (num) =>
-        new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(num);
+      const formatCurrency = (num) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(num);
 
-      // Note Text
       let noteText = "";
       if (timeFactor >= 2.5) {
           noteText = "<strong style='color:#ef4444;'>Status: Critical.</strong> You are in the 'shock period'. Rates are at their absolute peak.";
@@ -910,7 +869,6 @@
       document.getElementById('annualResult').innerText = `(${formatCurrency(lowAnnual)} - ${formatCurrency(highAnnual)} / year)`;
       document.getElementById('progressNote').innerHTML = noteText;
 
-      // Show result box / hide placeholder
       document.getElementById('resultPlaceholder').style.display = 'none';
       const resultBox = document.getElementById('resultBox');
       resultBox.style.display = 'flex';
@@ -937,18 +895,15 @@
       manualToggle.addEventListener("change", applyManualState);
       applyManualState();
 
-      // Submit
       form.addEventListener("submit", (e) => {
         e.preventDefault();
         runDUICalc();
-
         if (window.innerWidth < 900) {
           const rb = document.getElementById('resultBox');
           if (rb) rb.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
       });
 
-      // LIVE recalculation
       const liveIds = ["state", "age", "time", "coverage"];
       liveIds.forEach(id => {
         const el = document.getElementById(id);
@@ -963,7 +918,5 @@
       });
     });
   </script>
-
 </body>
-
 </html>
