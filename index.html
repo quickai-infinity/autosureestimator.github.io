@@ -22,7 +22,25 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="dark.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%230a0a0a' width='100' height='100' rx='20'/%3E%3Cpath d='M30 70V30h15l15 20-15 20H30z' fill='%2322c55e'/%3E%3Cpath d='M55 70V30h15v40H55z' fill='%2322c55e'/%3E%3C/svg%3E">
+  
+  <!-- Dark Theme CSS -->
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --text: #f5f5f5;
+      --muted: #a1a1aa;
+      --muted2: #71717a;
+      --border: rgba(255,255,255,0.08);
+      --blue: #3b82f6;
+      --blue2: #60a5fa;
+      --green: #22c55e;
+    }
+    html { background: var(--bg); }
+    body { background: var(--bg); color: var(--text); margin: 0; }
+    .glass-nav { background: rgba(10,10,10,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+  </style>
 
   <style>
     /* Base */
@@ -322,6 +340,7 @@
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="tools.html">Tools</a></li>
+          <li><a href="electricity-spain.html">Electricidad ES</a></li>
           <li><a href="#how">How It Works</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -342,7 +361,7 @@
       </p>
 
       <div class="btn-row">
-        <a class="btn primary" href="#tools.html">Start Estimating</a>
+        <a class="btn primary" href="tools.html">Start Estimating</a>
         <a class="btn ghost" href="#how">How It Works</a>
       </div>
 
@@ -422,6 +441,12 @@
           <div class="top"><h3>State-Based Averages</h3><span class="badge">STATES</span></div>
           <p>Browse cost guidance and minimum requirements by state. (More states coming.)</p>
           <span class="link">Open states →</span>
+        </a>
+
+        <a class="card" href="electricity-spain.html" style="border-color: rgba(34, 197, 94, 0.3); background: rgba(34, 197, 94, 0.05);">
+          <div class="top"><h3>⚡ Electricidad España</h3><span class="badge" style="background: rgba(34, 197, 94, 0.15); color: #22c55e; border-color: rgba(34, 197, 94, 0.3);">PVPC</span></div>
+          <p>Precios de luz en tiempo real, calculadora de factura y comparador de tarifas para España.</p>
+          <span class="link" style="color: #22c55e;">Abrir herramienta →</span>
         </a>
 
       </div>
